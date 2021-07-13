@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+import Heading from './Heading';
+import Nav from './Nav';
+import About from './About';
+import Polaroid from './Polaroid';
+import Footer from './Footer';
+import photo from './photo';
+
+
+
+function createPolaroid(photo){
+  return <Polaroid key={photo.id} img={photo.img} caption={photo.caption} />
+}
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Nav />
+      <Container fluid>
+      <Col><Heading /></Col>
+      
+      {photo.map(createPolaroid)}
+      <Col><About /></Col>
+      <Footer />
+
+
+      </Container>
     </div>
   );
 }
