@@ -8,9 +8,9 @@ function Nav() {
 
 return (
     <div>
-<Navbar fixed= "top" bg="light" expand="lg">
+<Navbar sticky= "top" bg="light" expand="lg">
 <Navbar.Brand href="#home">
-  wandering_light_photography
+  Wandering Light Photography
 </Navbar.Brand> 
  <Navbar.Toggle />
  <Navbar.Collapse>

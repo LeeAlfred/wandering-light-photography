@@ -7,15 +7,14 @@ import Container from "react-bootstrap/Container";
 
 function Heading() {
     return(
-        <Container fluid>
-<Jumbotron fluid id="home">
-<h1>Wandering Light Photography</h1>
+        <div className="heading">
+    <Container fluid id="home">
+    <h1>Wandering Light Photography</h1>
     <p>
-     This is who I am.
+     Landscape Photography.
     </p>
-  
-</Jumbotron>
-  </Container>      
+  </Container>   
+  </div>   
     )
 }
 
